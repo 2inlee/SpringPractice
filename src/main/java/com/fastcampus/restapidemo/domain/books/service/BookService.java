@@ -29,9 +29,9 @@ public class BookService {
         return bookRepository.findAll();
     }
 
-//    public List<Book> findByAuthorName(String authorName) {
-//        return bookRepository.findByAuthorName(authorName);
-//    }
+    public List<Book> findByAuthorName(String authorName) {
+        return bookRepository.findByAuthorsName(authorName);
+    }
 
     public void deleteById(Long id) {
         bookRepository.deleteById(id);
