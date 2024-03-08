@@ -27,8 +27,8 @@ public class AuthorController {
     public ResponseEntity<EntityModel<Author>> addAuthor(@RequestBody Author author) {
         Author savedAuthor = authorService.saveAuthor(author);
         final EntityModel<Author> entityModel = EntityModel.of(savedAuthor);
-        entityModel.add(linkTo(methodOn(this.getClass()).getAllAuthors()).withRel("all-authors"));
-        entityModel.add(linkTo(methodOn(this.getClass()).getAuthorById(savedAuthor.getId())).withRel("author-by-id"));
+//        entityModel.add(linkTo(methodOn(this.getClass()).getAllAuthors()).withRel("all-authors"));
+//        entityModel.add(linkTo(methodOn(this.getClass()).getAuthorById(savedAuthor.getId())).withRel("author-by-id"));
 
         return new ResponseEntity<>(entityModel, HttpStatus.CREATED);
     }
